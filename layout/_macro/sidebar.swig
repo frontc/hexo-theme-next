@@ -87,14 +87,7 @@
             </nav>
           {% endif %}
 
-          {% if theme.rss %}
-            <div class="feed-link motion-element">
-              <a href="{{ url_for(theme.rss) }}" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          {% endif %}
+
 
           {% if theme.social %}
             <div class="links-of-author motion-element">
@@ -147,6 +140,15 @@
             </div>
           {% endif %}
 
+          {% if theme.rss %}
+            <div class="feed-link motion-element">
+              <a href="{{ url_for(theme.rss) }}" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          {% endif %}
+          
           {% if theme.custom_file_path.sidebar %}
             {% set custom_sidebar = '../../../../' + theme.custom_file_path.sidebar %}
           {% else %}
